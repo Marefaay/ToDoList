@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body{
+    background-image: url(images/wp3744429.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #25242488;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.contanier{
+    background-color: #fff;
+    width: 50%;
+    /* height: 50vh; */
+    margin: 50px auto;
+    padding: 50px;
+}
+.contanier .add-task{
+    position: relative;
+    text-align: center;
+}
+.contanier .add-task label{
+    background-color: blueviolet;
+    color: white;
+    padding: 12px;
+    /* border-radius: 15px; */
+    position: absolute;
+    left: 42px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.contanier .add-task #input{
+    border: 1px solid blueviolet;
+    padding: 15px;
+    border-radius: 15px;
+    width: 80%;
+    transition: all 0.3s;
+    padding-left: 60px;
+}
+.contanier .add-task #input:focus{
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: 0 0 2px -1px #000;
+}
+.contanier .add-task #input::placeholder{
+    text-align: left;
+    font-size: 18px;
+}
+.contanier .add-task button{
+    padding: 14px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    position: absolute;
+    right: 56px;
+    color: #fff;
+    background: blueviolet;
+    font-size: 16px;
+    cursor: pointer;
+}
+.nav{
+    width: 80%;
+    margin: 40px 50px;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
+    /* gap: 50px; */
+    
+}
+.nav .to{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.nav #todo,
+.nav #finish{
+    /* background-color: #beb9b9; */
+    border: none;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /* color: #000; */
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.active{
+    background-color: blueviolet;
+    color: #fff;
+}
+.nav .finished-div{
+    background-color: #beb9b9;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding:10px;
+    position: relative;
+
+}
+.nav .todo-div
+{
+    display: none;
+    width: 100%;
+    /* background-color: #000; */
+    background-color: #beb9b9;
+    height: 100%;
+    padding:10px;
+}
+/* .nav .finished-div{
+    display: none;
+} */
+ .tasks-list{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin:40px 50px; */
+    width: 80%;
+    /* position: absolute; */
+    /* margin-top: 40px; */
+}
+.tasks-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+}
+
+.overlay{
+    background-color: #000000a6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition:  0.5s ;
+    z-index: 10000;
+}
+.left{
+    left: -2000px;
+}
+.popup{
+    background-color: #fff;
+    width: 50%;
+    height: 266px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-30%);
+    z-index: 99999;
+    text-align: center;
+}
+.popup h1{
+    margin-top: 80px;
+    font-size: 30px;
+}
+.fa-xmark{
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 100px; */
+    padding: 5px;
+    width: 100%;
+    text-transform: capitalize;
+    /* background-color: #000; */
+border-bottom: 1px solid #0000009d;
+}
+.p{
+    width: 50px;
+}
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.cont button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+.cont .edit{
+    background-color: rgb(44, 39, 37);
+
+}
+.cont .edit:hover{
+    background-color: #fff;
+    color: #000;
+}
+.cont .delte{
+    background-color: red;
+}
+.cont .delte:hover{
+    background-color: #000;
+}
+.cont .Finished{
+    background-color: green;
+}
+.cont .Finished:hover{
+    background-color: rgb(2, 100, 2);
+}
+.fa-check{
+    background-color: green;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    position: absolute;
+    left: 10px
+
+}
+.FP{
+    margin-left: 20px;
+}
+.FD{
+    background-color: red;
+    border: none;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.FD:hover{
+background-color: #000;
+}
